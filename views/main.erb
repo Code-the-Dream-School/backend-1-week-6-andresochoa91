@@ -1,4 +1,5 @@
 <h1>Guess a number between 1 and 100. You have <%= session[:chances] %> chances </h1>
+<h4><%= session[:message] %></h4>
 <div>
   <form method="post" action="/result" >
     <input type="hidden" name="_method" value="put"/>
@@ -7,4 +8,9 @@
     <input type="submit" value="Guess">
   </form>
 </div>
+<h2>Numbers guessed</h2>
+
+<% session[:guesses].each do |guess| %>
+  <h3><%= guess %></h3>
+<% end %>
 
