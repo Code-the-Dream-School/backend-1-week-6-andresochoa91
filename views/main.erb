@@ -1,0 +1,10 @@
+<h1>Guess a number between 1 and 100. You have <%= session[:chances] %> chances </h1>
+<div>
+  <form method="post" action="/result" >
+    <input type="hidden" name="_method" value="put"/>
+    <label for="content">Enter Your Number</label>
+    <input type="text" name="current_number"/>
+    <input type="submit" value="Guess">
+  </form>
+</div>
+
