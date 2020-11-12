@@ -1,6 +1,7 @@
 require "sinatra"
 
 enable :sessions
+set :sessions, :expire_after => 1000
 
 get "/" do
 	session[:random_number] = session[:random_number] || rand(1..100)
